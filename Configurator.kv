@@ -1,0 +1,70 @@
+WindowManager:
+    ConfigurationWindow:
+
+<ConfigurationWindow>:
+    size_selection: size_selection
+    base_selection: base_selection
+    price_label: price_label
+    FloatLayout:
+        cols: 1
+        Label:
+            text: "You can select your bubble tea configuration."
+            pos_hint: {'x': .4, 'y': .9}
+            size_hint: .2, .1
+            font_size: '20sp'
+        Spinner:
+            id: kind_selection
+            pos_hint: {'x': .1, 'y': .6}
+            size_hint: .2, .1
+            text: "Tea kind"
+            values: ["Black", "Green", "White"]
+        Spinner: 
+            id: size_selection
+            pos_hint: {'x': .7, 'y': .8}
+            size_hint: .2, .1
+            text: "Size"
+            values: ["Normal", "Big"]
+        Spinner:
+            id: base_selection
+            pos_hint: {'x': .7, 'y': .6}
+            size_hint: .2, .1
+            text: "Base"
+            values: ["Classical", "With milk"]
+        Spinner: 
+            id: syrup_selection
+            pos_hint: {'x': .7, 'y': .4}
+            size_hint: .2, .1
+            text: "Syrup"
+            values: ["Melon", "Green apple", "Pineapple", "Blueberry", "Cherry", "White peach"]
+        Spinner:
+            id: supplement_selection
+            pos_hint: {'x': .7, 'y': .2}
+            size_hint: .2, .1
+            text: "Supplement"
+            values: ["Tapioca", "Boba balls", "Jelly beans"]
+        Button:
+            pos_hint: {'x': .4, 'y': .3}
+            size_hint: .2, .1
+            text: "Count the prize"
+            on_release: root.count_prize()
+
+        Label:
+            id: price_label
+            pos_hint: {'x': .4, 'y': .1}
+            size_hint: .2, .1
+            text:""
+
+        Label:
+            pos_hint: {'x': .1, 'y': .35}
+            size_hint: .2, .1
+            text:"You have your own cup: "
+
+        CheckBox:
+            pos_hint: {'x': .1, 'y': .3}
+            size_hint: .1, .1
+            on_active: root.change_info_about_cap(self, self.active)
+        
+        Image:
+            source: "Bubble_Tea.png"
+            size_hint: .3, .3
+            pos_hint: {'x': .35, 'y': .5}
