@@ -1,5 +1,5 @@
 # Bubble-tea-configurator
-Simple configurator of bubble tea written in Pythonk
+Simple configurator of bubble tea written in Python
 
 # Launching the project:
 First you need to install Python. Then you need to install Kivy with the command:
