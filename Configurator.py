@@ -1,15 +1,12 @@
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import ObjectProperty
-from kivy.uix.widget import Widget
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.button import Button
-from kivy.uix.spinner import Spinner
 
 class ConfigurationWindow(Screen):
-    size_selection = ObjectProperty(None)
     base_selection = ObjectProperty(None)
     price_label = ObjectProperty(None)
+    size_selection = ObjectProperty(None)
     have_cup = False
     def count_prize(self):
         price = 16
